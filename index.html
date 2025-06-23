@@ -2,19 +2,19 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Dedectico - GPS + IP Log</title>
+  <title>Dedectico - GPS Zorunlu Takip</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h2>Dedectico | GPS + IP Loglama Sistemi</h2>
-  <p>Konum izni verilmeden sistem çalışmaz. GPS açık değilse işlem yapılmaz.</p>
+  <h2>Dedectico | GPS Zorunlu Takip Sistemi</h2>
+  <p>Konum izni verilmeden bu sistem çalışmaz.</p>
   <button onclick="getLocation()">Konumu Paylaş</button>
-  <pre id="output">Henüz veri alınmadı.</pre>
+  <pre id="output">Henüz bir konum alınmadı.</pre>
 
   <script>
     async function getLocation() {
       if (!navigator.geolocation) {
-        alert("Cihazınız konum özelliğini desteklemiyor.");
+        alert("Tarayıcınız konum özelliğini desteklemiyor.");
         return;
       }
 
@@ -46,7 +46,7 @@
         });
 
       }, () => {
-        alert("Konum izni verilmedi. Sistem devre dışı.");
+        alert("Konum izni verilmedi. Sistem çalıştırılamaz.");
       });
     }
   </script>
