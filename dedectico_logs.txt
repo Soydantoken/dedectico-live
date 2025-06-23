@@ -1,0 +1,1 @@
+{"Koordinatlar":{"latitude":41.0222592,"longitude":28.7768576},"Zaman":"23.06.2025 04:36:16"}
