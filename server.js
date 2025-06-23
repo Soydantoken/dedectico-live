@@ -1,10 +1,10 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static(__dirname)); // index.html erişimi
+app.use(express.static(__dirname)); // index.html sunumu
 
 app.post('/log', (req, res) => {
   const logData = req.body;
